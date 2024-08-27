@@ -1,19 +1,35 @@
-gsap.to(".imagecontainer", {
-  width: "100%",
-  stagger: 2,
-  ease: Expo.easeInOut,
-  stagger: 2,
+var tl = gsap.timeline({
+  repeat: -1,
 });
 
-gsap.to(".text h1", {
-  top: 0,
-  ease: Expo.easeInOut,
-  stagger: 2,
-});
+tl.to(
+  ".imagecontainer",
+  {
+    width: "100%",
+    stagger: 2,
+    ease: Expo.easeInOut,
+    stagger: 2,
+  },
+  "a"
+);
 
-gsap.to(".text h1", {
-  top: "100px",
-  ease: Expo.easeInOut,
-  delay: 2,
-  stagger: 2,
-});
+tl.to(
+  ".text h1",
+  {
+    top: 0,
+    ease: Expo.easeInOut,
+    stagger: 2,
+  },
+  "a"
+);
+
+tl.to(
+  ".text h1",
+  {
+    top: "100px",
+    ease: Expo.easeInOut,
+    delay: 2,
+    stagger: 2,
+  },
+  "a"
+);
